@@ -8,4 +8,12 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: './',
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    }
+  }
 })
