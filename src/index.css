@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #0e0e0e;
+  --color-surface-container-low: #131313;
+  --color-surface-container-high: #1f1f1f;
+  --color-surface-container-highest: #262626;
+  --color-surface-bright: #1c1c1c;
+  --color-primary: #ffe792;
+  --color-primary-container: #ffd709;
+  --color-tertiary: #fbf9f8;
+  --color-on-tertiary: #000000;
+  --color-outline-variant: rgba(255, 255, 255, 0.1);
+  --color-on-surface-variant: #ababab;
+
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --radius-xl: 3rem; /* 48px */
+  --radius-2xl: 4rem; /* 64px */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-black text-on-surface-variant font-body antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-surface-container-highest/70 backdrop-blur-[20px];
+  }
+  
+  .emoji-card {
+    @apply flex flex-col items-center justify-center bg-surface-container-high rounded-[3rem] p-8 transition-all duration-300 hover:scale-105 hover:bg-tertiary hover:text-on-tertiary w-full aspect-square;
+  }
+
+  .nav-link {
+    @apply text-xs font-bold uppercase tracking-widest hover:text-white transition-colors cursor-pointer;
+  }
+
+  .chip {
+    @apply px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all;
+  }
+
+  .chip-active {
+    @apply bg-primary text-black;
+  }
+
+  .chip-inactive {
+    @apply bg-surface-container-high text-on-surface-variant hover:text-white;
+  }
+
+  /* Custom Glow for Input */
+  .search-glow {
+    box-shadow: 0 0 40px -10px rgba(255, 231, 146, 0.1);
+  }
+
+  /* Hide scrollbar but allow scrolling */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
