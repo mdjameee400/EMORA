@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, History, Settings, Sparkles, Check, Copy, Download, Loader2, Zap, Cloud, Coffee, Pizza, Bike, Waves, Skull, Computer, Trash2, ArrowRight, Menu, X, ChevronDown, Globe, Github, Twitter, MessageSquare, Info, Shield, Terminal } from 'lucide-react';
+import { Search, History, Settings, Sparkles, Check, Copy, Download, Loader2, Zap, Cloud, Pizza, Bike, Skull, Trash2, ArrowRight, ChevronDown, Globe, MessageSquare, Shield, Terminal, ExternalLink } from 'lucide-react';
 import { cn } from './lib/utils';
 import { generateEmoji } from './services/emojiApi';
 
@@ -383,8 +383,8 @@ export default function App() {
            <div className="space-y-8">
               <h5 className="text-primary font-black text-[10px] uppercase tracking-[0.4em]">Connect</h5>
               <div className="flex gap-6">
-                <Github className="w-5 h-5 text-white/20 hover:text-primary transition-colors cursor-pointer" />
-                <Twitter className="w-5 h-5 text-white/20 hover:text-primary transition-colors cursor-pointer" />
+                <ExternalLink className="w-5 h-5 text-white/20 hover:text-primary transition-colors cursor-pointer" />
+                <Globe className="w-5 h-5 text-white/20 hover:text-primary transition-colors cursor-pointer" />
                 <MessageSquare className="w-5 h-5 text-white/20 hover:text-primary transition-colors cursor-pointer" />
               </div>
               <div className="pt-4">
